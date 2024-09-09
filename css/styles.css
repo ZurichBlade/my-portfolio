@@ -645,6 +645,42 @@ progress {
   margin-left: auto;
 }
 
+
+/* Container for each category */
+.tech-stack-category {
+    display: flex;
+    justify-content: space-between; /* Aligns the title to the right */
+    align-items: center; /* Centers the items vertically */
+    margin-bottom: 1rem; /* Adjust spacing as needed */
+}
+
+/* Container for items in each category */
+.tech-stack-items {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if they overflow */
+    gap: 1rem; /* Adjust spacing between items */
+    justify-content: center; /* Centers items horizontally */
+    flex-grow: 1; /* Allows items container to grow and take remaining space */
+}
+
+/* Style for each item */
+.tech-stack-items span {
+    background-color: #343a40; /* Adjust background color */
+    color: #ffffff; /* Adjust text color */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-size: 0.9rem; /* Adjust font size */
+    white-space: nowrap; /* Prevent text from wrapping */
+    position: relative; /* Position relative for absolute positioning of the learning text */
+}
+
+/* Style for the learning text */
+.learning {
+    font-size: 0.8rem; /* Adjust font size */
+    color: #f39c12; /* Adjust text color for visibility */
+    margin-left: 0.5rem; /* Space between the technology name and the learning text */
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -11120,7 +11156,7 @@ body {
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 7rem 0;
 }
 .projects-section .featured-text {
   padding: 2rem;
@@ -11135,6 +11171,12 @@ body {
   padding: 3rem;
   font-size: 90%;
 }
+
+.projects-section .project-text1 {
+  padding-left: 3rem;
+  font-size: 90%;
+}
+
 @media (min-width: 992px) {
   .projects-section .project-text {
     padding: 5rem;

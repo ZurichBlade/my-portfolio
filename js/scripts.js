@@ -23,6 +23,27 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
+     // Update copyright year
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) {
+            const currentYear = new Date().getFullYear();
+            yearSpan.textContent = currentYear;
+        }
+
+    // PDF Download Script
+        document.getElementById('downloadButton').addEventListener('click', function() {
+                // Define the URL of the PDF
+                var pdfUrl = 'raw/mehul_jadhav_resume.pdf';
+
+                // Create a temporary anchor element to trigger the download
+                var a = document.createElement('a');
+                a.href = pdfUrl;
+                a.download = 'mehul_jadhav_resume.pdf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+
     // Shrink the navbar 
     navbarShrink();
 
